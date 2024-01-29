@@ -1,0 +1,28 @@
+syntax ="proto3";
+
+package mygrcp;
+option go_package = "./mygrcp";
+
+
+
+service UserService {
+
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+
+}
+
+
+
+message HelloRequest {
+
+  string name = 1;
+
+}
+
+
+
+message HelloResponse {
+
+  string message = 1;
+
+}
